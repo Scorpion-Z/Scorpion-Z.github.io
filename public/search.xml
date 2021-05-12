@@ -1,45 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Linux chown 命令</title>
-    <url>/2021/05/11/Linux%20chown%20%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="Linux-chown-命令"><a href="#Linux-chown-命令" class="headerlink" title="Linux chown 命令"></a>Linux chown 命令</h1><p>Linux chown（英文全拼：<strong>change owner</strong>）命令用于设置文件所有者和文件关联组的命令。</p>
-<p>Linux/Unix 是多人多工操作系统，所有的文件皆有拥有者。利用 chown 将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户 ID，组可以是组名或者组 ID，文件是以空格分开的要改变权限的文件列表，支持通配符。 。</p>
-<p>chown 需要超级用户 <strong>root</strong> 的权限才能执行此命令。</p>
-<p>只有超级用户和属于组的文件所有者才能变更文件关联组。非超级用户如需要设置关联组可能需要使用 <a href="https://www.runoob.com/linux/linux-comm-chgrp.html">chgrp</a> 命令。</p>
-<p><strong>使用权限</strong> : root</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown [-cfhvR] [--help] [--version] user[:group] file...</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数</strong> :</p>
-<ul>
-<li>user : 新的文件拥有者的使用者 ID</li>
-<li>group : 新的文件拥有者的使用者组(group)</li>
-<li>-c : 显示更改的部分的信息</li>
-<li>-f : 忽略错误信息</li>
-<li>-h :修复符号链接</li>
-<li>-v : 显示详细的处理信息</li>
-<li>-R : 处理指定目录以及其子目录下的所有文件</li>
-<li>–help : 显示辅助说明</li>
-<li>–version : 显示版本</li>
-</ul>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>把 /var/run/httpd.pid 的所有者设置 root：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown root /var/run/httpd.pid</span><br></pre></td></tr></table></figure>
-
-<p>将文件 file1.txt 的拥有者设为 runoob，群体的使用者 runoobgroup :</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown runoob:runoobgroup file1.txt</span><br></pre></td></tr></table></figure>
-
-<p>将当前前目录下的所有文件与子目录的拥有者皆设为 runoob，群体的使用者 runoobgroup:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R runoob:runoobgroup *</span><br></pre></td></tr></table></figure>
-
-<p>把 /home/runoob 的关联组设置为 512 （关联组ID），不改变所有者：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown :512 /home/runoob</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux 磁盘管理</title>
-    <url>/2021/05/11/Linux-%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/</url>
+    <url>/2021/05/11/17-55-45/</url>
     <content><![CDATA[<h1 id="Linux-磁盘管理"><a href="#Linux-磁盘管理" class="headerlink" title="Linux 磁盘管理"></a>Linux 磁盘管理</h1><p>Linux磁盘管理好坏直接关系到整个系统的性能问题。</p>
 <p>Linux磁盘管理常用三个命令为df、du和fdisk。</p>
 <ul>
@@ -185,6 +148,43 @@
 </ul>
 <p>卸载/dev/hdc6</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@www ~]# umount /dev/hdc6     </span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux chown 命令</title>
+    <url>/2021/05/11/17-36-00/</url>
+    <content><![CDATA[<h1 id="Linux-chown-命令"><a href="#Linux-chown-命令" class="headerlink" title="Linux chown 命令"></a>Linux chown 命令</h1><p>Linux chown（英文全拼：<strong>change owner</strong>）命令用于设置文件所有者和文件关联组的命令。</p>
+<p>Linux/Unix 是多人多工操作系统，所有的文件皆有拥有者。利用 chown 将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户 ID，组可以是组名或者组 ID，文件是以空格分开的要改变权限的文件列表，支持通配符。 。</p>
+<p>chown 需要超级用户 <strong>root</strong> 的权限才能执行此命令。</p>
+<p>只有超级用户和属于组的文件所有者才能变更文件关联组。非超级用户如需要设置关联组可能需要使用 <a href="https://www.runoob.com/linux/linux-comm-chgrp.html">chgrp</a> 命令。</p>
+<p><strong>使用权限</strong> : root</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown [-cfhvR] [--help] [--version] user[:group] file...</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数</strong> :</p>
+<ul>
+<li>user : 新的文件拥有者的使用者 ID</li>
+<li>group : 新的文件拥有者的使用者组(group)</li>
+<li>-c : 显示更改的部分的信息</li>
+<li>-f : 忽略错误信息</li>
+<li>-h :修复符号链接</li>
+<li>-v : 显示详细的处理信息</li>
+<li>-R : 处理指定目录以及其子目录下的所有文件</li>
+<li>–help : 显示辅助说明</li>
+<li>–version : 显示版本</li>
+</ul>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>把 /var/run/httpd.pid 的所有者设置 root：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown root /var/run/httpd.pid</span><br></pre></td></tr></table></figure>
+
+<p>将文件 file1.txt 的拥有者设为 runoob，群体的使用者 runoobgroup :</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown runoob:runoobgroup file1.txt</span><br></pre></td></tr></table></figure>
+
+<p>将当前前目录下的所有文件与子目录的拥有者皆设为 runoob，群体的使用者 runoobgroup:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R runoob:runoobgroup *</span><br></pre></td></tr></table></figure>
+
+<p>把 /home/runoob 的关联组设置为 512 （关联组ID），不改变所有者：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown :512 /home/runoob</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>Linux</tag>
       </tags>
