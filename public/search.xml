@@ -1,44 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CentOS7重置root密码</title>
-    <url>/2021/05/18/15-04-33/</url>
-    <content><![CDATA[<h1 id="CentOS7重置root密码"><a href="#CentOS7重置root密码" class="headerlink" title="CentOS7重置root密码"></a>CentOS7重置root密码</h1><ol>
-<li>重启系统，在开机过程中，出现下图界面时按e键，进入编辑界面。</li>
-</ol>
-<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022130112789670.png" alt="1界面时按e键.png"></p>
-<p>按e键之后进入如下界面：</p>
-<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022130322702182.png" alt="2按e键之后进入如下界面.png"></p>
-<ol start="2">
-<li>按方向键下键↓，找到设置语言的地方，如LANG=en_US.UTF-8，在后面追加rw single init=/bin/bash,然后按ctrl+x重启系统</li>
-</ol>
-<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022130473066238.png" alt="3按ctrl+x重启系统.png"></p>
-<ol start="3">
-<li>进入bash界面后，可以输入passwd root命令重新设置root密码</li>
-</ol>
-<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022131082775472.png" alt="4进入bash界面后.png"></p>
-<p>如果开启了SELinux，执行命令touch /.autorelabel命令</p>
-<p>输入exec /sbin/init命令重启系统</p>
-<ol start="4">
-<li>使用新设置的密码进入系统之后，为了安全起见，可以输入reboot重新启动一次系统。</li>
-</ol>
-<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022131262432976.png" alt="5输入reboot重新启动.png"></p>
-<blockquote>
-<p><font color=red><strong>注意:</strong></font>下面的两条命令一定是要输入的,不输入或者输错会造成无法登陆的情况.</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">touch /.autorelabel</span><br><span class="line"><span class="built_in">exec</span> /sbin/init</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Linux技术</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux chown 命令</title>
     <url>/2021/05/11/17-36-00/</url>
     <content><![CDATA[<h1 id="Linux-chown-命令"><a href="#Linux-chown-命令" class="headerlink" title="Linux chown 命令"></a>Linux chown 命令</h1><p>Linux chown（英文全拼：<strong>change owner</strong>）命令用于设置文件所有者和文件关联组的命令。</p>
@@ -71,6 +33,44 @@
 
 <p>把 /home/runoob 的关联组设置为 512 （关联组ID），不改变所有者：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown :512 /home/runoob</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux技术</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS7重置root密码</title>
+    <url>/2021/05/18/15-04-33/</url>
+    <content><![CDATA[<h1 id="CentOS7重置root密码"><a href="#CentOS7重置root密码" class="headerlink" title="CentOS7重置root密码"></a>CentOS7重置root密码</h1><ol>
+<li>重启系统，在开机过程中，出现下图界面时按e键，进入编辑界面。</li>
+</ol>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022130112789670.png" alt="1界面时按e键.png"></p>
+<p>按e键之后进入如下界面：</p>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022130322702182.png" alt="2按e键之后进入如下界面.png"></p>
+<ol start="2">
+<li>按方向键下键↓，找到设置语言的地方，如LANG=en_US.UTF-8，在后面追加rw single init=/bin/bash,然后按ctrl+x重启系统</li>
+</ol>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022130473066238.png" alt="3按ctrl+x重启系统.png"></p>
+<ol start="3">
+<li>进入bash界面后，可以输入passwd root命令重新设置root密码</li>
+</ol>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022131082775472.png" alt="4进入bash界面后.png"></p>
+<p>如果开启了SELinux，执行命令touch /.autorelabel命令</p>
+<p>输入exec /sbin/init命令重启系统</p>
+<ol start="4">
+<li>使用新设置的密码进入系统之后，为了安全起见，可以输入reboot重新启动一次系统。</li>
+</ol>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022131262432976.png" alt="5输入reboot重新启动.png"></p>
+<blockquote>
+<p><font color=red><strong>注意:</strong></font>下面的两条命令一定是要输入的,不输入或者输错会造成无法登陆的情况.</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">touch /.autorelabel</span><br><span class="line"><span class="built_in">exec</span> /sbin/init</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
       <categories>
         <category>Linux技术</category>
       </categories>
@@ -228,6 +228,110 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@www ~]# umount /dev/hdc6     </span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Linux技术</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>lsblk命令</title>
+    <url>/2021/05/19/10-39-28/</url>
+    <content><![CDATA[<h1 id="lsblk命令"><a href="#lsblk命令" class="headerlink" title="lsblk命令"></a>lsblk命令</h1><p>lsblk命令-“list block”，即用于列出所有可用块设备的信息，而且还能显示他们之间的依赖关系，但是它不会列出RAM盘的信息。</p>
+<p>lsblk命令包含在util-linux-ng包中，现在该包改名为util-linux。</p>
+<p><strong>语法格式：</strong>lsblk [参数]</p>
+<p><strong>常用参数：</strong></p>
+<table>
+<thead>
+<tr>
+<th>-a</th>
+<th>显示所有设备</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-b</td>
+<td>以bytes方式显示设备大小</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>不显示 slaves 或 holders</td>
+</tr>
+<tr>
+<td>-D</td>
+<td>print discard capabilities</td>
+</tr>
+<tr>
+<td>-e</td>
+<td>排除设备</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>显示文件系统信息</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>显示帮助信息</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>use ascii characters only</td>
+</tr>
+<tr>
+<td>-m</td>
+<td>显示权限信息</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>使用列表格式显示</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>不显示标题</td>
+</tr>
+<tr>
+<td>-o</td>
+<td>输出列</td>
+</tr>
+<tr>
+<td>-P</td>
+<td>使用key=”value”格式显示</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>使用原始格式显示</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>显示拓扑结构信息</td>
+</tr>
+</tbody></table>
+<p><strong>参考实例</strong></p>
+<p>lsblk命令默认情况下将以树状列出所有块设备：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost ~ ]# lsblk</span><br><span class="line">lsblk NAME   MAJ:MIN rm  SIZE RO type mountpoint</span><br><span class="line">sda      8:0    0 232.9G  0 disk </span><br><span class="line">├─sda1   8:1    0  46.6G  0 part / </span><br><span class="line">├─sda2   8:2    0     1K  0 part  </span><br><span class="line">├─sda5   8:5    0   190M  0 part /boot </span><br><span class="line">├─sda6   8:6    0   3.7G  0 part [SWAP] </span><br><span class="line">├─sda7   8:7    0  93.1G  0 part /data </span><br><span class="line">└─sda8   8:8    0  89.2G  0 part /personal </span><br><span class="line">sr0     11:0    1  1024M  0 rom</span><br></pre></td></tr></table></figure>
+
+<p>7个栏目名称如下：</p>
+<ol>
+<li><strong>NAME</strong> ：这是块设备名。</li>
+<li><strong>MAJ:MIN</strong> ：本栏显示主要和次要设备号。</li>
+<li><strong>RM</strong> ：本栏显示设备是否可移动设备。注意，在本例中设备sdb和sr0的RM值等于1，这说明他们是可移动设备。</li>
+<li><strong>SIZE</strong> ：本栏列出设备的容量大小信息。例如298.1G表明该设备大小为298.1GB，而1K表明该设备大小为1KB。</li>
+<li><strong>RO</strong> ：该项表明设备是否为只读。在本案例中，所有设备的RO值为0，表明他们不是只读的。</li>
+<li><strong>TYPE</strong> ：本栏显示块设备是否是磁盘或磁盘上的一个分区。在本例中，sda和sdb是磁盘，而sr0是只读存储（rom）。</li>
+<li><strong>MOUNTPOINT</strong> ：本栏指出设备挂载的挂载点。</li>
+</ol>
+<p>默认选项不会列出所有空设备：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# lsblk -a </span><br></pre></td></tr></table></figure>
+
+<p>也可以用于列出一个特定设备的拥有关系，同时也可以列出组和模式：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# lsblk -m </span><br></pre></td></tr></table></figure>
+
+<p>要获取SCSI设备的列表，你只能使用-S选项，该选项是用来以颠倒的顺序打印依赖的：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># lsblk -S</span></span><br></pre></td></tr></table></figure>
+
+<p>例如，你也许想要以列表格式列出设备，而不是默认的树状格式。可以将两个不同的选项组合，以获得期望的输出：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># lsblk -nl</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Linux命令手册</category>
       </categories>
       <tags>
         <tag>Linux</tag>
