@@ -1,68 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Linux chown 命令</title>
-    <url>/2021/05/11/17-36-00/</url>
-    <content><![CDATA[<h1 id="Linux-chown-命令"><a href="#Linux-chown-命令" class="headerlink" title="Linux chown 命令"></a>Linux chown 命令</h1><p>Linux chown（英文全拼：<strong>change owner</strong>）命令用于设置文件所有者和文件关联组的命令。</p>
-<p>Linux/Unix 是多人多工操作系统，所有的文件皆有拥有者。利用 chown 将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户 ID，组可以是组名或者组 ID，文件是以空格分开的要改变权限的文件列表，支持通配符。 。</p>
-<p>chown 需要超级用户 <strong>root</strong> 的权限才能执行此命令。</p>
-<p>只有超级用户和属于组的文件所有者才能变更文件关联组。非超级用户如需要设置关联组可能需要使用 <a href="https://www.runoob.com/linux/linux-comm-chgrp.html">chgrp</a> 命令。</p>
-<p><strong>使用权限</strong> : root</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown [-cfhvR] [--help] [--version] user[:group] file...</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数</strong> :</p>
-<ul>
-<li>user : 新的文件拥有者的使用者 ID</li>
-<li>group : 新的文件拥有者的使用者组(group)</li>
-<li>-c : 显示更改的部分的信息</li>
-<li>-f : 忽略错误信息</li>
-<li>-h :修复符号链接</li>
-<li>-v : 显示详细的处理信息</li>
-<li>-R : 处理指定目录以及其子目录下的所有文件</li>
-<li>–help : 显示辅助说明</li>
-<li>–version : 显示版本</li>
-</ul>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>把 /var/run/httpd.pid 的所有者设置 root：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown root /var/run/httpd.pid</span><br></pre></td></tr></table></figure>
-
-<p>将文件 file1.txt 的拥有者设为 runoob，群体的使用者 runoobgroup :</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown runoob:runoobgroup file1.txt</span><br></pre></td></tr></table></figure>
-
-<p>将当前前目录下的所有文件与子目录的拥有者皆设为 runoob，群体的使用者 runoobgroup:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R runoob:runoobgroup *</span><br></pre></td></tr></table></figure>
-
-<p>把 /home/runoob 的关联组设置为 512 （关联组ID），不改变所有者：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown :512 /home/runoob</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Linux技术</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CentOS7重置root密码</title>
     <url>/2021/05/18/15-04-33/</url>
-    <content><![CDATA[<h1 id="CentOS7重置root密码"><a href="#CentOS7重置root密码" class="headerlink" title="CentOS7重置root密码"></a>CentOS7重置root密码</h1><ol>
-<li>重启系统，在开机过程中，出现下图界面时按e键，进入编辑界面。</li>
-</ol>
-<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022130112789670.png" alt="1界面时按e键.png"></p>
+    <content><![CDATA[<h4 id="重启系统，在开机过程中，出现下图界面时按e键，进入编辑界面。"><a href="#重启系统，在开机过程中，出现下图界面时按e键，进入编辑界面。" class="headerlink" title="重启系统，在开机过程中，出现下图界面时按e键，进入编辑界面。"></a>重启系统，在开机过程中，出现下图界面时按e键，进入编辑界面。</h4><p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022130112789670.png" alt="1界面时按e键.png"></p>
 <p>按e键之后进入如下界面：</p>
 <p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022130322702182.png" alt="2按e键之后进入如下界面.png"></p>
-<ol start="2">
-<li>按方向键下键↓，找到设置语言的地方，如LANG=en_US.UTF-8，在后面追加rw single init=/bin/bash,然后按ctrl+x重启系统</li>
-</ol>
-<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022130473066238.png" alt="3按ctrl+x重启系统.png"></p>
-<ol start="3">
-<li>进入bash界面后，可以输入passwd root命令重新设置root密码</li>
-</ol>
-<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022131082775472.png" alt="4进入bash界面后.png"></p>
+<h4 id="按方向键下键↓，找到设置语言的地方，如LANG-en-US-UTF-8，在后面追加rw-single-init-bin-bash-然后按ctrl-x重启系统"><a href="#按方向键下键↓，找到设置语言的地方，如LANG-en-US-UTF-8，在后面追加rw-single-init-bin-bash-然后按ctrl-x重启系统" class="headerlink" title="按方向键下键↓，找到设置语言的地方，如LANG=en_US.UTF-8，在后面追加rw single init=/bin/bash,然后按ctrl+x重启系统"></a>按方向键下键↓，找到设置语言的地方，如LANG=en_US.UTF-8，在后面追加rw single init=/bin/bash,然后按ctrl+x重启系统</h4><p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022130473066238.png" alt="3按ctrl+x重启系统.png"></p>
+<h4 id="进入bash界面后，可以输入passwd-root命令重新设置root密码"><a href="#进入bash界面后，可以输入passwd-root命令重新设置root密码" class="headerlink" title="进入bash界面后，可以输入passwd root命令重新设置root密码"></a>进入bash界面后，可以输入passwd root命令重新设置root密码</h4><p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022131082775472.png" alt="4进入bash界面后.png"></p>
 <p>如果开启了SELinux，执行命令touch /.autorelabel命令</p>
 <p>输入exec /sbin/init命令重启系统</p>
-<ol start="4">
-<li>使用新设置的密码进入系统之后，为了安全起见，可以输入reboot重新启动一次系统。</li>
-</ol>
-<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022131262432976.png" alt="5输入reboot重新启动.png"></p>
+<h4 id="使用新设置的密码进入系统之后，为了安全起见，可以输入reboot重新启动一次系统。"><a href="#使用新设置的密码进入系统之后，为了安全起见，可以输入reboot重新启动一次系统。" class="headerlink" title="使用新设置的密码进入系统之后，为了安全起见，可以输入reboot重新启动一次系统。"></a>使用新设置的密码进入系统之后，为了安全起见，可以输入reboot重新启动一次系统。</h4><p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/202003022131262432976.png" alt="5输入reboot重新启动.png"></p>
 <blockquote>
 <p><font color=red><strong>注意:</strong></font>下面的两条命令一定是要输入的,不输入或者输错会造成无法登陆的情况.</p>
 </blockquote>
@@ -81,7 +29,7 @@
   <entry>
     <title>Linux 磁盘管理</title>
     <url>/2021/05/11/17-55-45/</url>
-    <content><![CDATA[<h1 id="Linux-磁盘管理"><a href="#Linux-磁盘管理" class="headerlink" title="Linux 磁盘管理"></a>Linux 磁盘管理</h1><p>Linux磁盘管理好坏直接关系到整个系统的性能问题。</p>
+    <content><![CDATA[<p>Linux磁盘管理好坏直接关系到整个系统的性能问题。</p>
 <p>Linux磁盘管理常用三个命令为df、du和fdisk。</p>
 <ul>
 <li>df：列出文件系统的整体磁盘使用量</li>
@@ -234,9 +182,113 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux chown 命令</title>
+    <url>/2021/05/11/17-36-00/</url>
+    <content><![CDATA[<p>Linux chown（英文全拼：<strong>change owner</strong>）命令用于设置文件所有者和文件关联组的命令。</p>
+<p>Linux/Unix 是多人多工操作系统，所有的文件皆有拥有者。利用 chown 将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户 ID，组可以是组名或者组 ID，文件是以空格分开的要改变权限的文件列表，支持通配符。 。</p>
+<p>chown 需要超级用户 <strong>root</strong> 的权限才能执行此命令。</p>
+<p>只有超级用户和属于组的文件所有者才能变更文件关联组。非超级用户如需要设置关联组可能需要使用 <a href="https://www.runoob.com/linux/linux-comm-chgrp.html">chgrp</a> 命令。</p>
+<p><strong>使用权限</strong> : root</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown [-cfhvR] [--help] [--version] user[:group] file...</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数</strong> :</p>
+<ul>
+<li>user : 新的文件拥有者的使用者 ID</li>
+<li>group : 新的文件拥有者的使用者组(group)</li>
+<li>-c : 显示更改的部分的信息</li>
+<li>-f : 忽略错误信息</li>
+<li>-h :修复符号链接</li>
+<li>-v : 显示详细的处理信息</li>
+<li>-R : 处理指定目录以及其子目录下的所有文件</li>
+<li>–help : 显示辅助说明</li>
+<li>–version : 显示版本</li>
+</ul>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>把 /var/run/httpd.pid 的所有者设置 root：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown root /var/run/httpd.pid</span><br></pre></td></tr></table></figure>
+
+<p>将文件 file1.txt 的拥有者设为 runoob，群体的使用者 runoobgroup :</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown runoob:runoobgroup file1.txt</span><br></pre></td></tr></table></figure>
+
+<p>将当前前目录下的所有文件与子目录的拥有者皆设为 runoob，群体的使用者 runoobgroup:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R runoob:runoobgroup *</span><br></pre></td></tr></table></figure>
+
+<p>把 /home/runoob 的关联组设置为 512 （关联组ID），不改变所有者：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown :512 /home/runoob</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux技术</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VMWare下CentOS/RedHat的虚拟机根分区LVM扩容</title>
+    <url>/2021/05/19/17-22-20/</url>
+    <content><![CDATA[<h3 id="Linux磁盘管理基础知识介绍"><a href="#Linux磁盘管理基础知识介绍" class="headerlink" title="Linux磁盘管理基础知识介绍"></a>Linux磁盘管理基础知识介绍</h3><ul>
+<li><p>物理卷（Physical Volume,PV）：就是指硬盘分区，也可以是整个硬盘或已创建的软RAID，是LVM的基本存储设备。</p>
+</li>
+<li><p>卷组（Volume Group,VG）：是由一个或多个物理卷所组成的存储池，在卷组上能创建一个或多个逻辑卷。</p>
+</li>
+<li><p>逻辑卷（Logical Volume,LV）：类似于非LVM系统中的硬盘分区，它建立在卷组之上，是一个标准的块设备，在逻辑卷之上可以建立文件系统。</p>
+</li>
+</ul>
+<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><p>查看磁盘分区情况</p>
+<p>fdisk -l</p>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/24920309-00028ffeea417208.png" alt="img"></p>
+<p>根据上面的命令查看到未分区的磁盘/dev/sdc，进行分区</p>
+<p>fdisk /dev/sdc</p>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/24920309-da16c9346248775a.png" alt="img"></p>
+<p>对于上面的操作，依次输入 n 新建分区 -&gt; p 主分区 -&gt; 划分大小，默认全部，回车两次 -&gt; 这里设置分区类型 输入t -&gt; 回车，默认分区 -&gt; 输入 L 显示所有的分区 id, 这里LVM 是8e,输入 8e -&gt; 配置完后 输入w 保存退出</p>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/24920309-a7d6cb26e1b656a3.png" alt="img"></p>
+<p>查看新建分区的编号,可以看到是 /dev/sdc1</p>
+<p> fdisk -l</p>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/24920309-00028ffeea417208.png" alt="img"></p>
+<p>分区完后，需求重启一下</p>
+<p>reboot</p>
+<p>为了让之后的LVM可以使用到这个分区，我们需要在新的分区 /dev/sda3 上创建物理卷PV</p>
+<p>pvcreate /dev/sda3</p>
+<p>查看卷组</p>
+<p>pvgdisplay</p>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/24920309-8f2d0272b113fcf8.png" alt="img"></p>
+<p>扩容组的大小，centos 是本机的VG Name，每个系统的名字不同，需要用vgdisplay提前查看</p>
+<p>vgextend centos /dev/sdc1</p>
+<p>查看系统 PV 情况</p>
+<p>pvscan</p>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/24920309-e1c14c372b64f7ad.png" alt="img"></p>
+<p>接下来就是需要增大逻辑卷了，先查看系统的逻辑卷组</p>
+<p>lvdisplay</p>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/24920309-3a866a0eb5141d79.png" alt="img"></p>
+<p>如上图，/dev/centos/root 是当前逻辑卷LVM的挂载路径,使用以下命令扩展改逻辑卷</p>
+<p>lvextend -l +100%free /dev/centos/root /dev/sdc1</p>
+<p>逻辑卷扩展完成，还需要让系统能否使用上新的区域，先查看系统的文件系统：</p>
+<p>df -TH</p>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/24920309-066961be9a4398ca.png" alt="img"></p>
+<p>文件系统是ext，需要使用命令 resize2fs /dev/centos/root 一般centos 是xfs,unbuntu是ext3</p>
+<p>xfs_growfs /dev/centos/root</p>
+<p><img src="https://github.com/Scorpion-Z/picgo/raw/main/PICGOO/24920309-255cfef43c2fded8.png" alt="img"></p>
+<h3 id="Over"><a href="#Over" class="headerlink" title="Over!"></a>Over!</h3>]]></content>
+      <categories>
+        <category>VMware</category>
+      </categories>
+      <tags>
+        <tag>VMware Linux LVM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>firewall-cmd</title>
+    <url>/2021/05/19/11-07-27/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Linux技术</category>
+      </categories>
+      <tags>
+        <tag>firewall-cmd</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>lsblk命令</title>
     <url>/2021/05/19/10-39-28/</url>
-    <content><![CDATA[<h1 id="lsblk命令"><a href="#lsblk命令" class="headerlink" title="lsblk命令"></a>lsblk命令</h1><p>lsblk命令-“list block”，即用于列出所有可用块设备的信息，而且还能显示他们之间的依赖关系，但是它不会列出RAM盘的信息。</p>
+    <content><![CDATA[<p>lsblk命令-“list block”，即用于列出所有可用块设备的信息，而且还能显示他们之间的依赖关系，但是它不会列出RAM盘的信息。</p>
 <p>lsblk命令包含在util-linux-ng包中，现在该包改名为util-linux。</p>
 <p><strong>语法格式：</strong>lsblk [参数]</p>
 <p><strong>常用参数：</strong></p>
@@ -331,7 +383,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># lsblk -nl</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Linux命令手册</category>
+        <category>Linux技术</category>
       </categories>
       <tags>
         <tag>Linux</tag>
